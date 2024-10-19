@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike PrimeTime</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="bike.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Bike PrimeTime</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Bike PrimeTime</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control bg-secondary text-white" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control bg-secondary text-white" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container my-5">
+        <h2 class="text-center mb-5 text-light">Our Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-dark text-white">
+                    <img src="images/helmet.jpg" class="card-img-top" alt="Bike Helmet">
+                    <div class="card-body">
+                        <h5 class="card-title">Bike Helmet</h5>
+                        <p class="card-text">Price: ₹1200</p>
+                        <button class="btn btn-primary add-to-cart" data-id="1">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white">
+                    <img src="images/gloves.jpg" class="card-img-top" alt="Bike Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Bike Gloves</h5>
+                        <p class="card-text">Price: ₹800</p>
+                        <button class="btn btn-primary add-to-cart" data-id="2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark text-white">
+                    <img src="images/lights.jpg" class="card-img-top" alt="Bike Lights">
+                    <div class="card-body">
+                        <h5 class="card-title">Bike Lights</h5>
+                        <p class="card-text">Price: ₹600</p>
+                        <button class="btn btn-primary add-to-cart" data-id="3">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="fixed-bottom bg-dark p-3 text-white">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h5>Shopping Cart</h5>
+                <ul id="cart-items" class="list-unstyled"></ul>
+                <p>Total: ₹<span id="total-price">0.00</span></p>
+            </div>
+            <button id="checkout" class="btn btn-success" onclick="window.location.href='checkout.html'">Checkout</button>
+        </div>
+    </aside>
+
+    <script src="bike.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
